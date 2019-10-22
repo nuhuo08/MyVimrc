@@ -20,9 +20,8 @@ Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/vim-easy-align',
 
 Plug 'ervandew/supertab',
-Plug 'octol/vim-cpp-enhanced-highlight',
 Plug 'dense-analysis/ale',
-Plug 'Valloric/YouCompleteMe',
+Plug 'ycm-core/YouCompleteMe',
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets',
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }

@@ -11,7 +11,6 @@
 " vim-multiple-cursors
 " Git gutter (Git diff)
 
-" cpp enhanced highlight
 " ALE
 " YouCompleteMe
 
@@ -178,17 +177,6 @@ let g:gitgutter_enabled=1
 let g:gitgutter_diff_args = '-w'
 set updatetime=100
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => cpp enhanced highlight
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:cpp_class_scope_highlight = 1
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_experimental_simple_template_highlight = 1
-let g:cpp_concepts_highlight = 1
-let c_no_curly_error=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
