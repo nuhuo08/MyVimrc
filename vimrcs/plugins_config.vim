@@ -13,6 +13,7 @@
 
 " ALE
 " YouCompleteMe
+" UltiSnips
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,15 +91,8 @@ let g:tagbar_width = 35
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => LeaderF
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:Lf_ShortcutF = '<c-p>'
-" let g:Lf_ShortcutB = '<m-n>'
 noremap <leader>f :LeaderfFile<cr>
 noremap <leader>j :LeaderfMru<cr>
-" noremap <c-f> :LeaderfFile<cr>
-" noremap <c-j> :LeaderfMru<cr>
-" noremap <m-p> :LeaderfFunction!<cr>
-" noremap <m-n> :LeaderfBuffer<cr>
-" noremap <m-m> :LeaderfTag<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
@@ -158,17 +152,8 @@ autocmd FileType matlab setlocal commentstring=\%\ %s
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:multi_cursor_use_default_mapping=0
-" Default mapping
-let g:multi_cursor_start_word_key      = '<C-n>'
-let g:multi_cursor_select_all_word_key = '<A-s>'
-let g:multi_cursor_start_key           = 'g<C-s>'
-let g:multi_cursor_select_all_key      = 'g<A-s>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
-
+let g:multi_cursor_exit_from_insert_mode = 1
+let g:multi_cursor_exit_from_visual_mode = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
@@ -241,12 +226,12 @@ set completeopt=menu,menuone
 "            \ }
 let g:ycm_global_ycm_extra_conf = "~/.ycm_c-c++_conf.py"
 let g:ycm_confirm_extra_conf = 0
-" make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
-" let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" better key bindings for UltiSnipsExpandTrigger
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UltiSnips
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"

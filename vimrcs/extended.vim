@@ -12,7 +12,7 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
 " Open Ack and put the cursor in the right position
-map <leader>g :Ack
+map <leader>g :Ack 
 " When you press gv you Ack after the selected text
 vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
 " When you press <leader>r you can search and replace the selected text
@@ -59,7 +59,7 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.h,*.hpp,*.c,*.cpp,*.cc,*.m,*.vim :call CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.h,*.hpp,*.c,*.cpp,*.cc,*.m :call CleanExtraSpaces()
 endif
 
 " Remap VIM 0 to first non-blank character

@@ -19,11 +19,10 @@ Plug 'tpope/vim-commentary',
 Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/vim-easy-align',
 
-Plug 'ervandew/supertab',
-Plug 'dense-analysis/ale',
-Plug 'ycm-core/YouCompleteMe',
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets',
+Plug 'dense-analysis/ale',
+Plug 'ycm-core/YouCompleteMe',
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 Plug 'tpope/vim-fugitive',
@@ -35,7 +34,6 @@ let mapleader = ","
 
 set mouse=a             " General
 set backspace=indent,eol,start
-set whichwrap+=<,>,h,l
 set t_BE=               " Disable "bracketed paste mode" by clearing 't_BE'
 
 set history=500         " Sets how many lines of history VIM has to remember
@@ -83,7 +81,7 @@ set expandtab           " Use spaces instead of tabs
 set smarttab            " Enable smart-tabs
 set shiftwidth=4        " Number of auto-indent spaces
 set softtabstop=4       " Number of spaces per Tab
-set clipboard=unnamed
+" set clipboard=unnamed
 
 " Bash like keys for the command line
 cnoremap <C-A> <Home>
