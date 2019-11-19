@@ -7,6 +7,7 @@
 " lightline
 
 " EasyAlign
+" tag-comment
 " vim-commentary
 " vim-multiple-cursors
 " Git gutter (Git diff)
@@ -139,6 +140,16 @@ let g:lightline = {
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+" vipga[enter]*=
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => tag-comment
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <leader>tc :ElementComment<cr>
+" <leader>tu :ElementUncomment<cr>
+" <leader>tC :TagComment<cr>
+" <leader>tU :TagUncomment<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -224,10 +235,12 @@ set completeopt=menu,menuone
 "            \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
 "            \ 'cs,lua,javascript': ['re!\w{2}'],
 "            \ }
-let g:ycm_global_ycm_extra_conf = "~/.ycm_c-c++_conf.py"
+" Add flag to CMakeList.txt: -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+let g:ycm_global_ycm_extra_conf = "~/.vim_mengqi/.ycm_c-c++_conf.py"
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UltiSnips

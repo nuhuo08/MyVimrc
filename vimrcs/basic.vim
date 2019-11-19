@@ -16,6 +16,7 @@ Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'mileszs/ack.vim',
 Plug 'terryma/vim-multiple-cursors',
 Plug 'tpope/vim-commentary',
+Plug 'mvolkmann/vim-tag-comment',
 Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/vim-easy-align',
 
@@ -81,6 +82,7 @@ set expandtab           " Use spaces instead of tabs
 set smarttab            " Enable smart-tabs
 set shiftwidth=4        " Number of auto-indent spaces
 set softtabstop=4       " Number of spaces per Tab
+set tabstop=4
 " set clipboard=unnamed
 
 " Bash like keys for the command line
