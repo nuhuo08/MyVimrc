@@ -5,6 +5,8 @@ cd ~
 git clone git@github.com:nuhuo08/MyVimrc.git  
 mv MyVimrc .vim_mengqi  
 ln -s .vim_mengqi/.vimrc .vimrc  
+ln -s .vim_mengqi/.ackrc .ackrc  
+ln -s .vim_mengqi/.bash_aliases .bash_aliases  
 cd .vim_mengqi  
 mkdir -p cache plugged temp_dirs/undodir  
 vi  
