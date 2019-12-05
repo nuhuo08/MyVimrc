@@ -27,6 +27,7 @@ alias ros_ws_update='source devel/setup.bash'
 
 # terminal vpn
 #sudo /etc/init.d/polipo restart
+
 export http_proxy="http://127.0.0.1:12333"
 export https_proxy="http://127.0.0.1:12333"
 
@@ -44,9 +45,11 @@ export PATH=/home/mengqi/Qt5.7.1/5.7/gcc_64/bin:$PATH
 
 source /home/mengqi/catkin_ws/devel/setup.bash
 
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/catkin_loop
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/imu_dr_gps
 # export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/zm_slam/zm_version/Examples/ROS/ORB_SLAM2
 export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/Lidar_FeatureMap/Examples/ROS
 
 
+# compile tda2x
+export PATH=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin:$PATH
+# compile agl
+export PATH=/opt/poky-agl/3.0.0+snapshot/sysroots/x86_64-aglsdk-linux/usr/bin/aarch64-agl-linux:$PATH

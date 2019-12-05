@@ -22,7 +22,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'cscope\.', 'tags']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'cscope\.', '.tags']
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeMirrorToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
@@ -85,6 +85,7 @@ endif
 " Open/close tagbar with ,tb
 nmap <silent> <leader>tb :TagbarToggle<CR>
 let g:tagbar_width = 35
+let g:tagbar_sort = 0
 " Uncomment to open tagbar automatically whenever possible
 " autocmd BufEnter * nested :call tagbar#autoopen(0)
 
@@ -98,6 +99,7 @@ let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
 let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_UseVersionControlTool = 0
 let g:Lf_WindowHeight = 0.30
 let g:Lf_CacheDirectory = expand('~/.vim_mengqi/cache')
 let g:Lf_ShowRelativePath = 0
