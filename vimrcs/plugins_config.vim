@@ -54,26 +54,26 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tags & gutentags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <F6> :!ctags -f ".tags" -R *<CR>
-  \:set tags=./.tags<CR>
+" nmap <F6> :!ctags -f ".tags" -R *<CR>
+"   \:set tags=./.tags<CR>
 
 set tags=./.tags;,.tags
-" gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+" stop recursivly search upward when the files/folders exists
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 
-" 所生成的数据文件的名称
+" name of the generated tag file: .tags
 let g:gutentags_ctags_tagfile = '.tags'
 
-" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+" move auto-generated .tags file to ~/.cache/tags dir, in case of polluting project dir.
 let s:vim_tags = expand('~/.cache/tags')
 let g:gutentags_cache_dir = s:vim_tags
 
-" 配置 ctags 的参数
+" config ctags parameters
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
-" 检测 ~/.cache/tags 不存在就新建
+" create ~/.cache/tags dir if not exists
 if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
@@ -98,7 +98,7 @@ noremap <leader>j :LeaderfMru<cr>
 let g:Lf_StlSeparator = { 'left': '', 'right': '', 'font': '' }
 
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
-let g:Lf_WorkingDirectoryMode = 'Ac'
+let g:Lf_WorkingDirectoryMode = 'Fc'
 let g:Lf_UseVersionControlTool = 0
 let g:Lf_WindowHeight = 0.30
 let g:Lf_CacheDirectory = expand('~/.vim_mengqi/cache')
