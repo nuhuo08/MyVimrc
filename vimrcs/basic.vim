@@ -4,6 +4,7 @@ call plug#begin('~/.vim_mengqi/plugged')
 Plug 'vim-scripts/peaksea',
 Plug 'altercation/vim-colors-solarized',
 Plug 'itchyny/lightline.vim',
+Plug 'lilydjwg/fcitx.vim',
 
 Plug 'milkypostman/vim-togglelist',
 Plug 'scrooloose/nerdtree',
@@ -20,6 +21,8 @@ Plug 'mvolkmann/vim-tag-comment',
 Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/vim-easy-align',
 
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets',
 Plug 'dense-analysis/ale',
@@ -119,6 +122,6 @@ set background=dark
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
 highlight FoldColumn ctermbg=Black ctermfg=Black
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=0 guibg=lightgrey
+set colorcolumn=100
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 

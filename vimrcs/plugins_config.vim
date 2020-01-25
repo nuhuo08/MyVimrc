@@ -15,6 +15,8 @@
 " ALE
 " YouCompleteMe
 " UltiSnips
+" vimtex
+" instant-markdown
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,6 +74,7 @@ let g:gutentags_cache_dir = s:vim_tags
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--exclude=out']
 
 " create ~/.cache/tags dir if not exists
 if !isdirectory(s:vim_tags)
@@ -250,5 +253,30 @@ let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vimtex
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tex_flavor='latex'
+" let g:vimtex_view_method='Okular'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => instant-markdown
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Uncomment to override defaults:
+"let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+"let g:instant_markdown_open_to_the_world = 1
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 0
+let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autoscroll = 0
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_python = 1
 

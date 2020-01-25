@@ -99,6 +99,9 @@ endtry
 
 " Fast editing and reloading of vimrc configs
 map <leader>e :e! ~/.vimrc<cr>
+map <leader>eb :e! ~/.vim_mengqi/vimrcs/basic.vim<cr>
+map <leader>ee :e! ~/.vim_mengqi/vimrcs/extended.vim<cr>
+map <leader>ep :e! ~/.vim_mengqi/vimrcs/plugins_config.vim<cr>
 " autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
 " Kill the capslock when leaving insert mode.
