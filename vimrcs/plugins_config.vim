@@ -280,3 +280,10 @@ let g:instant_markdown_mathjax = 1
 "let g:instant_markdown_port = 8888
 "let g:instant_markdown_python = 1
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Yankstack
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:yankstack_yank_keys = ['y', 'd']
+nmap <A-p> <Plug>yankstack_substitute_older_paste
+nmap <A-n> <Plug>yankstack_substitute_newer_paste

@@ -20,6 +20,7 @@ Plug 'tpope/vim-commentary',
 Plug 'mvolkmann/vim-tag-comment',
 Plug 'easymotion/vim-easymotion',
 Plug 'junegunn/vim-easy-align',
+Plug 'maxbrunsfeld/vim-yankstack',
 
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'lervag/vimtex'
@@ -87,6 +88,15 @@ set shiftwidth=4        " Number of auto-indent spaces
 set softtabstop=4       " Number of spaces per Tab
 set tabstop=4
 " set clipboard=unnamed
+
+" enable Alt key
+let c='a'
+while c <= 'z'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+set timeout ttimeoutlen=50
 
 " Bash like keys for the command line
 cnoremap <C-A> <Home>
