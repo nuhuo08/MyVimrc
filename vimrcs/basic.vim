@@ -111,6 +111,27 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Parenthesis/bracket
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $4 <esc>`>a`<esc>`<i`<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+vnoremap $e <esc>`>a"<esc>`<i"<esc>
+
+inoremap $1 ()<esc>i
+inoremap $2 []<esc>i
+inoremap $3 {}<esc>i
+inoremap $4 ``<esc>i
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i
+
+" Execute 'lnoremap x X' and 'lnoremap X x' for each letter a-z.
+for c in range(char2nr('A'), char2nr('Z'))
+  execute 'lnoremap ' . nr2char(c+32) . ' ' . nr2char(c)
+  execute 'lnoremap ' . nr2char(c) . ' ' . nr2char(c+32)
+endfor
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
@@ -128,6 +149,7 @@ try
     " colorscheme solarized
 catch
 endtry
+
 set background=dark
 set cursorline
 highlight CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
@@ -135,3 +157,6 @@ highlight FoldColumn ctermbg=Black ctermfg=Black
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8

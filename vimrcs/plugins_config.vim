@@ -262,7 +262,7 @@ let g:UltiSnipsEditSplit="vertical"
 let g:tex_flavor='latex'
 " let g:vimtex_view_method='Okular'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
+" set conceallevel=1
 let g:tex_conceal='abdmg'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -274,7 +274,7 @@ let g:instant_markdown_autostart = 0
 "let g:instant_markdown_open_to_the_world = 1
 "let g:instant_markdown_allow_unsafe_content = 1
 "let g:instant_markdown_allow_external_content = 0
-let g:instant_markdown_mathjax = 1
+" let g:instant_markdown_mathjax = 1
 "let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
 "let g:instant_markdown_autoscroll = 0
 "let g:instant_markdown_port = 8888
@@ -286,4 +286,4 @@ let g:instant_markdown_mathjax = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:yankstack_yank_keys = ['y', 'd']
 nmap <A-p> <Plug>yankstack_substitute_older_paste
-nmap <A-n> <Plug>yankstack_substitute_newer_paste
+nmap <A-m> <Plug>yankstack_substitute_newer_paste

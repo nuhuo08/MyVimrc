@@ -14,6 +14,9 @@ export LC_ALL=en_US.UTF-8
 # used to record bash directory history
 source ~/.vim_mengqi/acd_func.sh
 
+# use ctrl+r and ctrl+s to search history cmd
+[[ $- == *i* ]] && stty -ixon
+
 # to run zadas
 export LD_LIBRARY_PATH="/home/mengqi/work/gerrit/zadas/out/linux_x86_64/bin:$LD_LIBRARY_PATH"
 
