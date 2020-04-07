@@ -21,12 +21,17 @@ source ~/.vim_mengqi/acd_func.sh
 export LD_LIBRARY_PATH="/home/mengqi/work/gerrit/zadas/out/linux_x86_64/bin:$LD_LIBRARY_PATH"
 
 # update ros environment
-source /opt/ros/kinetic/setup.bash
-alias ros_ws_update='source devel/setup.bash'
 
-# solve rviz libGl drawable error
-# Copy, PBuffer, or FBO
-# export OGRE_RTT_MODE=PBuffer
+# If you want to use conda environment, comment out the following two lines.
+# Python env in ROS may conflict with Conda, DONOT enable both of them.
+source /opt/ros/kinetic/setup.bash
+source /home/mengqi/catkin_ws/devel/setup.bash
+alias ros_ws_update='source devel/setup.bash'
+# Use conda environment
+# conda activate base
+
+# export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/zm_slam/zm_version/Examples/ROS/ORB_SLAM2
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/Lidar_FeatureMap/Examples/ROS
 
 # terminal vpn
 #sudo /etc/init.d/polipo restart
@@ -34,25 +39,22 @@ alias ros_ws_update='source devel/setup.bash'
 export http_proxy="http://127.0.0.1:12333"
 export https_proxy="http://127.0.0.1:12333"
 
+alias tdassh='ssh root@192.168.1.100'
+alias tdacopybin='scp -rC out/A_FAW_C229_fc/linux_tda2x/bin root@192.168.1.100:/zadas/'
+alias tdacopylib='scp -rC out/A_FAW_C229_fc/linux_tda2x/lib root@192.168.1.100:/zadas/'
+alias tdacopyall='scp -rC out/A_FAW_C229_fc/linux_tda2x/*   root@192.168.1.100:/zadas/'
 
-alias zadasssh='ssh root@192.168.244.101'
-alias zadascopybin='scp -rC out/linux_imx6/bin/ root@192.168.244.101:/zadas/'
-alias zadascopydata='scp -rC out/linux_imx6/data/ root@192.168.244.101:/zadas/'
-alias zadascopyparams='scp -rC out/linux_imx6/params/ root@192.168.244.101:/zadas/'
-alias zadascopyall='scp -rC out/linux_imx6/bin/ out/linux_imx6/data/ out/linux_imx6/params/ root@192.168.244.101:/zadas/'
+alias rmnet='sudo rm /etc/resolv.conf'
 
 alias catkin_make='catkin_make -j1'
 alias make='make -j1'
 
+alias buildmake='rm -rf build && mkdir build && cd build && cmake .. && make'
+
+# QT path
 export PATH=/home/mengqi/Qt5.7.1/5.7/gcc_64/bin:$PATH
-
-source /home/mengqi/catkin_ws/devel/setup.bash
-
-# export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/zm_slam/zm_version/Examples/ROS/ORB_SLAM2
-export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/mengqi/work/positioning/Lidar_FeatureMap/Examples/ROS
-
-
 # compile tda2x
-export PATH=/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin:$PATH
+export PATH=/media/mengqi/Windows/Ubuntu_Files/opt/gcc-linaro-5.3-2016.02-x86_64_arm-linux-gnueabihf/bin:$PATH
 # compile agl
-export PATH=/opt/poky-agl/3.0.0+snapshot/sysroots/x86_64-aglsdk-linux/usr/bin/aarch64-agl-linux:$PATH
+export PATH=/media/mengqi/Windows/Ubuntu_Files/opt/poky-agl/3.0.0+snapshot/sysroots/x86_64-aglsdk-linux/usr/bin/aarch64-agl-linux:$PATH
+
