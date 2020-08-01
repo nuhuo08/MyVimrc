@@ -159,6 +159,8 @@ let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
+let g:Lf_UseCache = 0
+" let g:Lf_UseMemoryCache = 0
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -337,3 +339,7 @@ let g:instant_markdown_autostart = 0
 let g:yankstack_yank_keys = ['y', 'd']
 nmap <A-p> <Plug>yankstack_substitute_older_paste
 nmap <A-m> <Plug>yankstack_substitute_newer_paste
+
+" => AsyncRun
+let g:asyncrun_open = 8
+let $PYTHONUNBUFFERED=1

@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree',
 Plug 'jistr/vim-nerdtree-tabs',
 Plug 'ludovicchabant/vim-gutentags',
 Plug 'majutsushi/tagbar',
+Plug 'skywind3000/asyncrun.vim',
 
 Plug 'vim-scripts/a.vim',
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
@@ -88,6 +89,8 @@ set shiftwidth=4        " Number of auto-indent spaces
 set softtabstop=4       " Number of spaces per Tab
 set tabstop=4
 " set clipboard=unnamed
+
+" map <leader>w :wjk<cr>
 
 " enable Alt key
 let c='a'

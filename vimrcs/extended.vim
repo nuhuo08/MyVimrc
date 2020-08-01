@@ -60,6 +60,13 @@ endfun
 
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.h,*.hpp,*.c,*.cpp,*.cc,*.m :call CleanExtraSpaces()
+    autocmd BufRead,BufNewFile *.launch setfiletype roslaunch
+ 
+    " Kill the capslock when leaving insert mode.
+    autocmd InsertLeave * set iminsert=0
+
+    " push quickfix window always to the bottom
+    autocmd FileType qf wincmd J
 endif
 
 " Remap VIM 0 to first non-blank character
@@ -70,9 +77,6 @@ nnoremap * :keepjumps normal! mi*`i<CR>
 nnoremap # :keepjumps normal! mi#`i<CR>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
-
-" push quickfix window always to the bottom
-autocmd FileType qf wincmd J
 
 iab xdate <c-r>=strftime("%Y/%m/%d %H:%M:%S")<cr>
 
@@ -103,9 +107,6 @@ map <leader>eb :e! ~/.vim_mengqi/vimrcs/basic.vim<cr>
 map <leader>ee :e! ~/.vim_mengqi/vimrcs/extended.vim<cr>
 map <leader>ep :e! ~/.vim_mengqi/vimrcs/plugins_config.vim<cr>
 " autocmd! bufwritepost ~/.vimrc source ~/.vimrc
-
-" Kill the capslock when leaving insert mode.
-autocmd InsertLeave * set iminsert=0
 
 " Remove all trailing whitespace by pressing F5
 " nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
