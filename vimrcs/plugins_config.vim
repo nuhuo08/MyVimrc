@@ -161,6 +161,8 @@ let g:Lf_StlColorscheme = 'powerline'
 let g:Lf_PreviewResult = {'Function':0, 'BufTag':0}
 let g:Lf_UseCache = 0
 " let g:Lf_UseMemoryCache = 0
+ let g:Lf_ShowDevIcons = 0
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -231,6 +233,18 @@ let g:gitgutter_diff_args = '-w'
 set updatetime=100
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
+" Git Gutter"
+set updatetime=250
+let g:gitgutter_max_signs = 500
+" No mapping
+" let g:gitgutter_map_keys = 0
+" Colors
+let g:gitgutter_override_sign_column_highlight = 0
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=2
+highlight GitGutterChange ctermfg=3
+highlight GitGutterDelete ctermfg=1
+highlight GitGutterChangeDelete ctermfg=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => ALE
@@ -343,3 +357,5 @@ nmap <A-m> <Plug>yankstack_substitute_newer_paste
 " => AsyncRun
 let g:asyncrun_open = 8
 let $PYTHONUNBUFFERED=1
+map <leader>ar :AsyncRun 
+map <leader>ap :AsyncRun -raw python %<cr>

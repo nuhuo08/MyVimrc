@@ -28,7 +28,7 @@ Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets',
 Plug 'dense-analysis/ale',
-Plug 'ycm-core/YouCompleteMe',
+" Plug 'ycm-core/YouCompleteMe',
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 Plug 'tpope/vim-fugitive',
@@ -159,6 +159,7 @@ highlight CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
 highlight FoldColumn ctermbg=Black ctermfg=Black
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+set signcolumn=number
 
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
