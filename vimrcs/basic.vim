@@ -28,7 +28,7 @@ Plug 'lervag/vimtex'
 Plug 'SirVer/ultisnips',
 Plug 'honza/vim-snippets',
 Plug 'dense-analysis/ale',
-" Plug 'ycm-core/YouCompleteMe',
+Plug 'ycm-core/YouCompleteMe',
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 Plug 'tpope/vim-fugitive',
@@ -164,3 +164,6 @@ set signcolumn=number
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
+
+let &t_TI = ""
+let &t_TE = ""
